@@ -1,0 +1,13 @@
+﻿@model Laba9.Models.Weather
+
+<h2>Weather for @Model.Name</h2>
+<p>Temperature: @Model.Main?.Temp (in Kelvin)</p>
+
+@if (Model.WeatherCondition != null && Model.WeatherCondition.Length > 0 && Model.WeatherCondition[0]?.Description != null)
+{
+    <p>Description: @Model.WeatherCondition[0].Description</p>
+}
+else
+{
+    <p>Description: <a href="https://openweathermap.org/city/6454924">https://openweathermap.org/city/6454924</a></p>
+}

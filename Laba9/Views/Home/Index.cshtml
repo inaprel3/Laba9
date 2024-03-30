@@ -1,0 +1,45 @@
+﻿@model List<Laba9.Models.Product>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E0FFFF;
+            font-size: 24px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            padding: 12px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        td {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Products</h1>
+    @await Component.InvokeAsync("Products", Model)
+
+    <h1>Weather</h1>
+    @await Component.InvokeAsync("Weather", "Nice")
+
+</body>
+</html>
